@@ -78,4 +78,4 @@ O layout foi baseado no Figma do desafio.
 
 ---
 
-Feito com 💜 por Wesley Berto.
+Feito por Wesley Berto.
