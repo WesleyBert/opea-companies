@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 4px #0001;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  &:hover {
+    box-shadow: 0 2px 8px #0002;
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  margin-right: 1.2rem;
+  color: #7c1d46;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem; 
+}
+
+.name {
+  font-weight: bold;
+  color: #7c1d46;
+  min-width: 180px; 
+  flex: 1;
+}
+
+.cnpj {
+  color: #444;
+  min-width: 180px;
+  flex: 1;
+}
+
+.email {
+  color: #444;
+  min-width: 220px;
+  flex: 2;
+  word-break: break-all;
+}
