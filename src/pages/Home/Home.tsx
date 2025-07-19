@@ -5,7 +5,8 @@ import { useCompanies } from "../../hook/useCompanies";
 import { Header } from "../../components/Header/Header";
 import { CompanyList } from "../../components/CompanyList";
 import { Modal } from "../../components/Modal/Modal";
-import { IoMdAdd } from "react-icons/io";
+import icon from "../../assets/list.png";
+import { IoMdSearch } from "react-icons/io";
 
 import type Company from "../../types/Company";
 
@@ -58,15 +59,23 @@ export const Home = () => {
       <Header />
       <div className={styles.contentArea}>
         <section className={styles.mainContainer}>
+          <div className={styles.searchWrapper}>
+            <div className={styles.searchArea}>
+              <input
+                className={styles.searchInput}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Buscar empresa..."
+              />
+              <span className={styles.searchIcon}>
+                <IoMdSearch />
+              </span>
+            </div>
+          </div>
           <button className={styles.addButton} onClick={handleAdd}>
-            <IoMdAdd /> Adicionar Empresa
+            <img src={icon} alt="" />
+            Adicionar Empresa
           </button>
-          <input
-            className={styles.searchInput}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Buscar por empresas"
-          />
           <CompanyList companies={companies} onSelect={handleEdit} />
         </section>
       </div>

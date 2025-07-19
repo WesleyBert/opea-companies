@@ -1,3 +1,4 @@
+
 body, html, #root {
   margin: 0;
   padding: 0;
@@ -6,7 +7,14 @@ body, html, #root {
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
   color: #444;
-  
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
 body {

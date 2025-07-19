@@ -1,0 +1,21 @@
+:root {
+  --color-bg: #f6f6f6;
+  --color-bg-card: #fff;
+  --color-text: black;
+  --color-primary: #7c1d46;
+  --color-secondary: #5a1433;
+  --color-border: #e0e0e0;
+  --color-input-bg: #fafafa;
+  --icon-invert: 0;
+}
+
+[data-theme="dark"] {
+  --color-bg: #18181b;
+  --color-bg-card: #23232a;
+  --color-text: #f3f3f3;
+  --color-primary: #e06c88;
+  --color-secondary: #a23c5a;
+  --color-border: #333;
+  --color-input-bg: #23232a;
+  --icon-invert: 1;
+}

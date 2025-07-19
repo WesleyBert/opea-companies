@@ -7,7 +7,10 @@ export const SupportChat: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Olá! Como posso ajudar você?" },
+    {
+      from: "bot",
+      text: "Olá! Sou assistente do projeto. Fique à vontade para tirar suas dúvidas.",
+    },
   ]);
   const [input, setInput] = useState("");
 

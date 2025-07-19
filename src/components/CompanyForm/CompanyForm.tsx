@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type Company from "../../types/Company";
 import styles from "./CompanyForm.module.scss";
+import { FaTrashAlt } from "react-icons/fa";
 
 interface CompanyFormProps {
   initialData?: Company;
@@ -46,10 +47,15 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
   }, [initialData]);
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <h2>{form.id ? "Editar Empresa" : "Cadastrar Empresa"}</h2>
       <label>
         Nome
-        <input name="name" value={form.name} onChange={handleChange} required />
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          required
+          className={styles.input}
+        />
       </label>
       <label>
         CNPJ
@@ -62,6 +68,7 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
           inputMode="numeric"
           pattern="\d{14}"
           placeholder="Apenas números"
+          className={styles.input}
         />
       </label>
       <label>
@@ -71,18 +78,21 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
           value={form.email}
           onChange={handleChange}
           required
+          className={styles.input}
         />
       </label>
       <div className={styles.actions}>
         {onDelete && (
           <button type="button" className={styles.delete} onClick={onDelete}>
-            🗑️
+            <FaTrashAlt />
           </button>
         )}
-        <button type="button" onClick={onCancel}>
+        <button type="button" className={styles.cancel} onClick={onCancel}>
           Cancelar
         </button>
-        <button type="submit">{form.id ? "Salvar" : "Cadastrar"}</button>
+        <button type="submit" className={styles.save}>
+          {form.id ? "Salvar" : "Cadastrar"}
+        </button>
       </div>
     </form>
   );

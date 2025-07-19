@@ -1,5 +1,6 @@
 import styles from "./CompanyCard.module.scss";
 import type Company from "../../types/Company";
+import icon from "../../assets/list.png";
 
 interface CompanyCardProps {
   company: Company;
@@ -12,7 +13,7 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({
 }) => {
   return (
     <div className={styles.card} onClick={onClick}>
-      <span className={styles.icon}>📋</span>
+      <img src={icon} className={styles.icon} />
       <div className={styles.infoRow}>
         <span className={styles.name}>{company.name}</span>
         <span className={styles.cnpj}>CPNJ: {company.cnpj}</span>
