@@ -69,21 +69,19 @@ export const Home = () => {
           />
           <CompanyList companies={companies} onSelect={handleEdit} />
         </section>
-        {modalOpen && (
-          <aside className={styles.modalArea}>
-            <Modal open={modalOpen} onClose={handleCloseModal}>
-              <CompanyForm
-                initialData={
-                  selectedCompany || { name: "", cnpj: "", email: "" }
-                }
-                onSubmit={handleSubmite}
-                onCancel={handleCloseModal}
-                onDelete={selectedCompany ? handleDeleteCompany : undefined}
-              />
-            </Modal>
-          </aside>
-        )}
       </div>
+      {modalOpen && (
+        <aside className={styles.modalArea}>
+          <Modal open={modalOpen} onClose={handleCloseModal}>
+            <CompanyForm
+              initialData={selectedCompany || { name: "", cnpj: "", email: "" }}
+              onSubmit={handleSubmite}
+              onCancel={handleCloseModal}
+              onDelete={selectedCompany ? handleDeleteCompany : undefined}
+            />
+          </Modal>
+        </aside>
+      )}
     </div>
   );
 };

@@ -2,10 +2,11 @@ body, html, #root {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: #f6f6f6;
+  background: #ffff;
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
   color: #444;
+  
 }
 
 body {

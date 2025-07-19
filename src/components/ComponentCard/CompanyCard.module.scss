@@ -23,13 +23,13 @@
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 2rem; 
+  gap: 2rem;
 }
 
 .name {
   font-weight: bold;
   color: #7c1d46;
-  min-width: 180px; 
+  min-width: 180px;
   flex: 1;
 }
 
@@ -39,9 +39,41 @@
   flex: 1;
 }
 
+.cnpj,
+.email {
+  font-size: 0.95rem;
+  color: #888;
+  word-break: break-all;
+  max-width: 100%;
+}
+
 .email {
   color: #444;
   min-width: 220px;
   flex: 2;
   word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .infoRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .name,
+  .cnpj,
+  .email {
+    min-width: unset;
+    max-width: 100%;
+    word-break: break-all;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
 }

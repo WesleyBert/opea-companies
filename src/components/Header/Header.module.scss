@@ -1,29 +1,54 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 2rem 3rem 1.5rem 3rem;
-    border-radius: 0 2px 8px #0001;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem 3rem 1.5rem 3rem;
+  border-radius: 0 2px 8px #0001;
+  margin-bottom: 2rem;
 }
 
 .logo {
-    font-size: 2.2rem;
-    color: #7c1d46;
-    font-weight: bold;
-    letter-spacing: 1px;
+  font-size: 2.2rem;
+  color: #7c1d46;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .user {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-size: 1.1rem;
-    opacity: 0.8;
-    color: #7c1c46;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  color: #7c1c46;
 }
 
 .icon {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .user {
+    font-size: 1rem;
+    gap: 0.4rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
