@@ -3,7 +3,7 @@ import { CompanyForm } from "../../components/CompanyForm/CompanyForm";
 import styles from "./Home.module.scss";
 import { useCompanies } from "../../hook/useCompanies";
 import { Header } from "../../components/Header/Header";
-import { CompanyList } from "../../components/CompanyList/CompanyList";
+import { CompanyList } from "../../components/CompanyList";
 import { Modal } from "../../components/Modal/Modal";
 import { IoMdAdd } from "react-icons/io";
 

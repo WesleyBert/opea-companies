@@ -1,5 +1,5 @@
-import type Company from "../../types/Company";
-import { CompanyCard } from "../ComponentCard/ComponentCard";
+import type Company from "../types/Company";
+import { CompanyCard } from "../components/ComponentCard/ComponentCard";
 
 interface ComponentListProps {
   companies: Company[];
