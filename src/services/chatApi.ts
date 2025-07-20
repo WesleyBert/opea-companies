@@ -12,7 +12,7 @@ export default async function fetchBotResponse(
           Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "openai/gpt-4o-mini",
+          model: "openai/gpt-3.5-turbo",
           messages: [
             {
               role: "system",
