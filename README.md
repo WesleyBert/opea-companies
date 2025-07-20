@@ -122,25 +122,5 @@ Para que o chat de suporte funcione, é necessário obter uma chave de API váli
 > **Atenção:**  
 > As chaves do OpenRouter podem expirar ou ser revogadas. Se o chat parar de funcionar e aparecer erro 401, gere uma nova chave e repita o processo acima.
 
-## 📸 Preview
-
-## 👨‍💻 Como contribuir
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature/fix:
-   ```bash
-   git checkout -b minha-feature
-   ```
-3. Commit suas alterações:
-   ```bash
-   git commit -m 'feat: minha nova feature'
-   ```
-4. Push na sua branch:
-   ```bash
-   git push origin minha-feature
-   ```
-5. Abra um Pull Request
-
----
 
 Feito por Wesley Berto.
