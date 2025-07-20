@@ -1,5 +1,7 @@
 # 🏢 Opea Cadastro de Empresas
 
+Deploy: https://opea-companies.vercel.app/
+
 Sistema web para cadastro, listagem, edição, busca e exclusão de empresas, desenvolvido em **React + TypeScript** com integração a uma API RESTful.
 
 ## ✨ Funcionalidades
