@@ -1,23 +1,25 @@
 # 🏢 Opea Cadastro de Empresas
 
-Projeto de front-end para cadastro, listagem, edição, busca e exclusão de empresas, desenvolvido em **React + TypeScript**, com integração a uma API RESTful.
+Sistema web para cadastro, listagem, edição, busca e exclusão de empresas, desenvolvido em **React + TypeScript** com integração a uma API RESTful.
 
 ## ✨ Funcionalidades
 
-- ✅ Listagem de empresas cadastradas
-- ➕ Cadastro de nova empresa
-- ✏️ Edição de empresa existente
-- ❌ Exclusão de empresa
-- 🔍 Busca dinâmica por nome, CNPJ ou e-mail
-- 📱 Layout responsivo e moderno, inspirado no Figma
-- 🔒 Validação de CNPJ (apenas números, 14 dígitos)
-- 🖼️ Modal para cadastro/edição
+- ✅ **Listagem de empresas** cadastradas em cards
+- ➕ **Cadastro** de nova empresa via modal
+- ✏️ **Edição** de empresa existente (basta clicar no card)
+- ❌ **Exclusão** de empresa (ícone de lixeira no modal de edição)
+- 🔍 **Busca dinâmica** por nome, CNPJ ou e-mail (campo "Buscar empresa...")
+- 📱 **Layout responsivo** e moderno, inspirado no Figma
+- 🔒 **Validação de CNPJ** (apenas números, 14 dígitos)
+- 🖼️ **Modal** para cadastro e edição
+- 🌙 **Alternância de tema** (claro/escuro)
+- 💬 **Chat de suporte** integrado (ícone de interrogação no canto)
 
 ## 🚀 Tecnologias Utilizadas
 
 - React
 - TypeScript
-- SASS
+- SASS (SCSS Modules)
 - Axios
 - Vite
 - React Icons
@@ -46,18 +48,44 @@ Projeto de front-end para cadastro, listagem, edição, busca e exclusão de emp
   [https://piysgkm5oc.execute-api.sa-east-1.amazonaws.com/dev/companies](https://piysgkm5oc.execute-api.sa-east-1.amazonaws.com/dev/companies)
 
 - **Formato do objeto empresa:**
-  (Adicione aqui um exemplo do JSON esperado, se desejar)
+
+  ```json
+  {
+    "id": "string",
+    "name": "Nome da Empresa",
+    "cnpj": "12345678000199",
+    "email": "empresa@email.com"
+  }
+  ```
 
 - **Métodos disponíveis:**  
   `GET`, `POST`, `PUT`, `DELETE`
 
 ## 🖥️ Layout
 
-O layout foi baseado no Figma do desafio.
+O layout é responsivo, adaptando-se a dispositivos móveis e desktops, e foi baseado no Figma do desafio.
+
+## 📝 Como usar
+
+1. **Adicionar Empresa:**  
+   Clique no botão **"Adicionar Empresa"** e preencha os campos **Nome**, **CNPJ** (apenas números) e **E-mail** no modal. Clique em **"Cadastrar"** para salvar.
+
+2. **Buscar Empresa:**  
+   Use o campo **"Buscar empresa..."** para filtrar empresas por nome, CNPJ ou e-mail.
+
+3. **Editar Empresa:**  
+   Clique sobre o card da empresa desejada, altere os dados no modal e clique em **"Salvar"**.
+
+4. **Excluir Empresa:**  
+   No modal de edição, clique no ícone de lixeira para remover a empresa.
+
+5. **Alternar Tema:**  
+   Use o botão de sol/lua no topo para alternar entre modo claro e escuro.
+
+6. **Suporte:**  
+   Clique no ícone de interrogação no canto inferior direito para abrir o chat de suporte.
 
 ## 📸 Preview
-
-> Adicione aqui um screenshot do sistema, se desejar.
 
 ## 👨‍💻 Como contribuir
 

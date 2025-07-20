@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./SupportChat.module.scss";
 import { MdContactSupport } from "react-icons/md";
 import ResponseIA from "../../services/chatApi";
@@ -13,6 +13,14 @@ export const SupportChat: React.FC = () => {
     },
   ]);
   const [input, setInput] = useState("");
+
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   async function handleSend() {
     if (!input.trim() || loading) return;
@@ -53,6 +61,7 @@ export const SupportChat: React.FC = () => {
                 <i>O bot está digitando...</i>
               </div>
             )}
+            <div ref={messagesEndRef} />
           </div>
           <div className={styles.inputArea}>
             <input

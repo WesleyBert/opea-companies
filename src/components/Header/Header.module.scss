@@ -18,9 +18,12 @@
   cursor: pointer;
   color: var(--color-primary);
   transition: color 0.2s;
-  &:hover {
-    color: var(--color-secondary);
-  }
+}
+.themeToggle:hover {
+  color: var(--color-primary);
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .logo {
