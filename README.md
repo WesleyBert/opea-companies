@@ -11,6 +11,7 @@ Sistema web para cadastro, listagem, edição, busca e exclusão de empresas, de
 - 🔍 **Busca dinâmica** por nome, CNPJ ou e-mail (campo "Buscar empresa...")
 - 📱 **Layout responsivo** e moderno, inspirado no Figma
 - 🔒 **Validação de CNPJ** (apenas números, 14 dígitos)
+- 🔒 **Validação de E-MAIL** (apenas números, 14 dígitos)
 - 🖼️ **Modal** para cadastro e edição
 - 🌙 **Alternância de tema** (claro/escuro)
 - 💬 **Chat de suporte** integrado (ícone de interrogação no canto)

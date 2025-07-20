@@ -39,7 +39,6 @@ export const Home = () => {
 
   async function handleSubmite(data: Company) {
     if (selectedCompany && selectedCompany.id) {
-      console.log("formulario enviado ");
       await handleUpdate(selectedCompany.id, data);
     } else {
       await handleCreate(data);

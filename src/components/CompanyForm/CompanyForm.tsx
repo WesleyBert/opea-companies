@@ -40,6 +40,11 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
       toast.error("CNPJ deve conter exatamente 14 dígitos.");
       return;
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      toast.error("E-mail inválido.");
+      return;
+    }
     onSubmit(form);
   }
 
@@ -70,6 +75,7 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
           pattern="\d{14}"
           placeholder="Apenas números"
           className={styles.input}
+          disabled={!!form.id}
         />
       </label>
       <label>
@@ -79,7 +85,9 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
           value={form.email}
           onChange={handleChange}
           required
+          type="email"
           className={styles.input}
+          disabled={!!form.id}
         />
       </label>
       <div className={styles.actions}>

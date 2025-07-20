@@ -2,7 +2,6 @@ export default async function fetchBotResponse(
   userMessage: string
 ): Promise<string> {
   const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
-  console.log("API KEY:", import.meta.env.VITE_OPENAI_API_KEY);
   try {
     const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
@@ -47,7 +46,6 @@ export default async function fetchBotResponse(
       "Desculpe, não consegui entender sua mensagem."
     );
   } catch (error) {
-    console.error("Erro ao buscar resposta do bot:", error);
     return "Desculpe, ocorreu um erro ao processar sua mensagem.";
   }
 }
