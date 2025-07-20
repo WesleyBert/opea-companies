@@ -4,13 +4,17 @@ import logo from "../../assets/logo.png";
 
 export const Header = () => {
   const mockUser = "Anderson Silva";
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    return saved ? JSON.parse(saved) : false;
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
       dark ? "dark" : "light"
     );
+    localStorage.setItem("darkMode", JSON.stringify(dark));
   }, [dark]);
 
   return (
@@ -24,7 +28,7 @@ export const Header = () => {
         <span className={styles.icon}>👤</span>
         <button
           className={styles.themeToggle}
-          onClick={() => setDark((v) => !v)}
+          onClick={() => setDark((v: boolean) => !v)}
           aria-label="Alternar tema"
         >
           {dark ? "🌙" : "☀️"}

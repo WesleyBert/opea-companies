@@ -85,6 +85,42 @@ O layout é responsivo, adaptando-se a dispositivos móveis e desktops, e foi ba
 6. **Suporte:**  
    Clique no ícone de interrogação no canto inferior direito para abrir o chat de suporte.
 
+## 🤖 Como configurar o Chatbot (OpenRouter)
+
+Para que o chat de suporte funcione, é necessário obter uma chave de API válida do OpenRouter. Siga o passo a passo:
+
+1. **Acesse o site do OpenRouter:**  
+   [https://openrouter.ai/](https://openrouter.ai/)
+
+2. **Crie uma conta ou faça login.**
+
+3. **Gere uma nova API Key:**
+
+   - No painel do usuário, procure pela opção “API Keys” ou “Chaves de API”.
+   - Clique em “Create Key” ou “Nova Chave”.
+   - Copie a chave gerada (ela começa com `sk-or-v1-...`).
+
+4. **Adicione a chave ao seu projeto:**
+
+   - Crie (ou edite) o arquivo `.env` na raiz do projeto.
+   - Adicione a linha:
+     ```
+     VITE_OPENAI_API_KEY=sua-chave-aqui
+     ```
+     Substitua `sua-chave-aqui` pela chave copiada do OpenRouter.
+
+5. **Salve o arquivo e reinicie o servidor de desenvolvimento:**
+
+   ```bash
+   npm run dev
+   ```
+
+6. **Pronto!**  
+   Agora o chat de suporte funcionará normalmente.
+
+> **Atenção:**  
+> As chaves do OpenRouter podem expirar ou ser revogadas. Se o chat parar de funcionar e aparecer erro 401, gere uma nova chave e repita o processo acima.
+
 ## 📸 Preview
 
 ## 👨‍💻 Como contribuir

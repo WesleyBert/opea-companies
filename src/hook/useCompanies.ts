@@ -7,6 +7,7 @@ import {
   updateCompany,
 } from "../services/api";
 import type Company from "../types/Company";
+import { toast } from "react-toastify";
 
 export function useCompanies() {
   const [companies, setCompanies] = useState<Company[]>([]);
@@ -48,9 +49,9 @@ export function useCompanies() {
         error.response &&
         (error.response.status === 400 || error.response.status === 409)
       ) {
-        alert("Já existe uma empresa com esse CNPJ ou e-mail!");
+        toast.error("Já existe uma empresa com esse CNPJ ou e-mail!");
       } else {
-        alert(`Erro ao criar empresa. ${error}`);
+        toast.error(`Erro ao criar empresa. ${error}`);
       }
     }
   }

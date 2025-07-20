@@ -2,6 +2,7 @@ export default async function fetchBotResponse(
   userMessage: string
 ): Promise<string> {
   const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+  console.log("API KEY:", import.meta.env.VITE_OPENAI_API_KEY);
   try {
     const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",

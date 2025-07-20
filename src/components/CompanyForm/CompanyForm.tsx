@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type Company from "../../types/Company";
 import styles from "./CompanyForm.module.scss";
 import { FaTrashAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 interface CompanyFormProps {
   initialData?: Company;
@@ -32,11 +33,11 @@ export const CompanyForm: React.FC<CompanyFormProps> = ({
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!form.name || !form.cnpj || !form.email) {
-      alert("Todos os campos são obrigatórios!");
+      toast.info("Todos os campos são obrigatórios!");
       return;
     }
     if (form.cnpj.length !== 14) {
-      alert("CNPJ deve conter exatamente 14 dígitos.");
+      toast.error("CNPJ deve conter exatamente 14 dígitos.");
       return;
     }
     onSubmit(form);
