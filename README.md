@@ -108,7 +108,7 @@ Para que o chat de suporte funcione, é necessário obter uma chave de API váli
    - Crie (ou edite) o arquivo `.env` na raiz do projeto.
    - Adicione a linha:
      ```
-     VITE_OPENAI_API_KEY=sua-chave-aqui
+     VITE_OPENROUTER_API_KEY=sua-chave-aqui
      ```
      Substitua `sua-chave-aqui` pela chave copiada do OpenRouter.
 
